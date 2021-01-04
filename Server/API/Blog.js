@@ -8,9 +8,21 @@ router.use(function(req, res, next) {
 })
 
 router
-    .route("/")
+    .route("/:articleid")
     .get((req, res) => {
-        res.render(path.join(__dirname, '../../Client/ejs/pages', 'index.ejs'));
+
+        let data = {};
+
+        // All Query
+        if (req.params.articleid == "all") {
+
+        }
+
+        // Specific Query
+        else {
+
+        }
+        res.json(data);
     })
     .post();
 

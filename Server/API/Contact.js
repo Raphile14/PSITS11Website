@@ -10,7 +10,19 @@ router.use(function(req, res, next) {
 router
     .route("/")
     .get((req, res) => {
-        res.render(path.join(__dirname, '../../Client/ejs/pages', 'page_not_found.ejs'));
+
+        let data = {};
+
+        // All Query
+        if (req.params.articleid == "all") {
+
+        }
+
+        // Specific Query
+        else {
+
+        }
+        res.json(data);
     })
     .post();
 

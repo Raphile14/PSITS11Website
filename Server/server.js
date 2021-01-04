@@ -4,10 +4,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 
-
-// Express Routes
-const index = require("./Routes/Index.js");
-const pageNotFound = require("./Routes/PageNotFound.js");
+// API Routes
+const blog = require("./API/Blog.js");
+const contact = require("./API/Contact.js");
+const login = require("./API/Login.js");
+const register = require("./API/Register.js");
 
 // Setting Up Express
 app.set('view enginer', 'ejs');
@@ -17,12 +18,10 @@ app.use(express.json({extended: false}));
 app.use(express.static('Client'));
 
 // Routings
-app.use("/", index);
-app.use("/page_not_found", pageNotFound);
-
-app.get("*", (req, res) => {
-    return res.redirect("/page_not_found");    
-});
+app.use("/blog", blog);
+app.use("/contact/send", contact);
+app.use("/auth/login", login);
+app.use("/auth/register", register);
 
 app.listen(process.env.PORT, () => {
     console.log("Server is listening on " + process.env.PORT);
