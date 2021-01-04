@@ -12,17 +12,8 @@ router
     .get((req, res) => {
 
         let data = {};
-
-        // All Query
-        if (req.params.articleid == "all") {
-
-        }
-
-        // Specific Query
-        else {
-
-        }
         res.json(data);
+        
     })
     .post();
 
