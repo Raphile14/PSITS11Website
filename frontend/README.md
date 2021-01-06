@@ -10,5 +10,5 @@ React frontend developed by [Justine Quijano](https://github.com/jmquijano).
 ## /src/config/
 | Folder | File Name | Type | Description |
 | -- |--|--| --
-| /src/config/ | routes.config.js | Javascript | **RouteConfigProvider** provides router path configuration for **react-router-dom**, parsed as **array.map()**.
+| /src/config/ | routes.config.js | Javascript | **RouteConfigProvider** provides router path configuration for **react-router-dom**, parsed using **array.map()**.
 | /src/config/ | layout.config.js | Javascript | **LayoutConfigProvider** is an array constant which provides configuration parameters to certain view components.
