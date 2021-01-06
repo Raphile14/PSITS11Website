@@ -20,7 +20,7 @@ const blogSchema = new mongoose.Schema({
     date: requestRequired,
     updatedAt: requestNotRequired,
     authorID: requestRequired,
-    description: requestBoolean,
+    description: requestRequired,
     coverImageLink: requestRequired
 });
 

@@ -20,6 +20,8 @@ const userSchema = new mongoose.Schema({
     lastName: requestRequired,
     email: requestRequired,
     phoneNumber: requestRequired,
+    date: requestNotRequired,
+    modified: requestNotRequired,
     course: requestRequired, 
     school: requestRequired,
     year_level: requestRequired,    
