@@ -10,6 +10,8 @@ const blog = require("./API/Blog.js");
 const contact = require("./API/Contact.js");
 const login = require("./API/Login.js");
 const register = require("./API/Register.js");
+const newsletter = require("./API/Newsletter.js");
+const newsletterUnsubscribe = require("./API/NewsletterUnsubscribe.js");
 
 // Connect to MongoDB
 connectDB();
@@ -26,6 +28,8 @@ app.use("/blog", blog);
 app.use("/contact/send", contact);
 app.use("/auth/login", login);
 app.use("/auth/register", register);
+app.use("/newsletter/subscribe/new", newsletter);
+app.use("/newsletter/subscribe/unsubscribe", newsletterUnsubscribe);
 
 app.listen(process.env.PORT, () => {
     console.log("Server is listening on " + process.env.PORT);
