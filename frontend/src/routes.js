@@ -10,18 +10,22 @@
 import React from "react";
 
 // React Router Dom Imports
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 // React Helmet Imports
 import Helmet from 'react-helmet';
 
 // Configuration Imports
 import { RouteConfigProvider } from './config/routes.config';
-
+import { SiteConfigProvider } from './config/sites.config';
 // Other Component Imports
 import { TitleComponent } from './components/title';
 
 class Routes extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <Router>
@@ -37,6 +41,7 @@ class Routes extends React.Component {
                 </Switch>
             </Router>
         )
+       
     }
 }
 
