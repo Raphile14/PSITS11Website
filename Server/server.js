@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const connectDB = require("./Database/Connection.js");
 const app = express();
+const cors = require('cors');
 
 // API Routes
 const blog = require("./API/Blog.js");
@@ -22,6 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json({extended: false}));
 app.use(express.static('Client'));
+app.use(cors());
 
 // Routings
 app.use("/blog", blog);
